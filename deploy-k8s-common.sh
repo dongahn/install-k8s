@@ -39,7 +39,7 @@ sudo systemctl restart containerd
 sudo systemctl enable containerd
 
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo gpg --dearmour -o /etc/apt/trusted.gpg.d/kubernetes-xenial.gpg
-sudo apt-add-repository "deb http://apt.kubernetes.io/ kubernetes-xenial main"
+sudo apt-add-repository -y "deb http://apt.kubernetes.io/ kubernetes-xenial main"
 
 sudo apt update
 sudo apt install -y -o Dpkg::Options::="--force-confnew" -o Dpkg::Options::="--force-confold" kubelet kubeadm kubectl
